@@ -13,6 +13,8 @@ import HomeScreen from './screens/HomeScreen'
 import ProductDetailScreen from './screens/ProductDetailScreen'
 import CartScreen from './screens/CartScreen'
 
+import AppHeader from './components/AppHeader'
+
 export default function App() {
   const Stack = createNativeStackNavigator()
 
@@ -20,7 +22,7 @@ export default function App() {
     <Provider store={store}>
       <NavigationContainer>
         <SafeAreaProvider>
-          <Stack.Navigator>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name='DeliverToScreen' component={DeliverToScreen}/>
             <Stack.Screen name='MapScreen' component={MapScreen}/>
             <Stack.Screen name='HomeScreen' component={HomeScreen}/>
